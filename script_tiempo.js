@@ -4730,28 +4730,7 @@ let panelMarker = null;
 markers.forEach(function(m) {
     m.on('click', function() {
         panelMarker = m;
-        if (!navegandoConFlechas) {
-            var cv = parseFloat(slider.value);
-            var best = null;
-            fechasClave.forEach(function(f) {
-                if (f.marker === m && f.valor <= cv) {
-                    if (!best || f.valor > best.valor) best = f;
-                }
-            });
-            if (!best) {
-                // Marker is before current slider — jump to its first entry
-                fechasClave.forEach(function(f) {
-                    if (f.marker === m) {
-                        if (!best || f.valor < best.valor) best = f;
-                    }
-                });
-            }
-            if (best && Math.abs(best.valor - cv) > 0.01) {
-                navegandoConFlechas = true;
-                slider.value = best.valor;
-                slider.dispatchEvent(new Event('input'));
-                navegandoConFlechas = false;
-            }
+        
         }
     });
 });
