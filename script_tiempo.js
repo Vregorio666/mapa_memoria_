@@ -4730,8 +4730,6 @@ let panelMarker = null;
 markers.forEach(function(m) {
     m.on('click', function() {
         panelMarker = m;
-        
-        }
     });
 });
 
