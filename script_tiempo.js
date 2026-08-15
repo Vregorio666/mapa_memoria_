@@ -297,7 +297,7 @@ Se regularizaron campamentos y tomas, mientras se construían nuevas viviendas.
     texto = `<p style="font-weight: bolder;">1973</p>En octubre de 1973 llega la Caravana de la Muerte a la región de Los Ríos.
     Esta caravana, dirigida por el coronel Sergio Arellano Stark, recorre distintas ciudades de todo Chile
     en helicópteros Puma entre septiembre y octubre de 1973, deteniéndose en distintos lugares
-    para ejecutar y hacer desaparecer a personas asociadas a la izquierda.<br><br>
+    para ejecutar y hacer desaparecer chilenos y chilenas.<br><br>
     En la región de Los Ríos, en las matanzas de Chihuío, Neltume, Liquiñe y Maiquillahue,
     son asesinados más de 40 campesinos y dirigentes políticos.`;
 
@@ -1066,7 +1066,7 @@ markerllancahue.on('click', function() {
          <div class="galeria">
                 
 
-<img src="./galerias/memoriales/llancahue/llancahue_2004.webp" data-descripcion="Victor Eugenio Rudlof Reyes <br> 32 años, Obrero Maderero."onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+<img src="./galerias/memoriales/llancahue/llancahue_2004.webp" data-descripcion="Primeras Actividades para el memorial de Llancahue"onclick="ampliarFoto(this.src, this.closest('.galeria'))">
     </div>
 
         `;
@@ -1986,7 +1986,7 @@ consumar así la desaparición del cadáver de José Matías
                                   <div class="galeria">
 
  <video data-descripcion="Video del memorial" controls>
-        <source src="./galerias/memoriales/liquine/Liquinereel.mp4" type="video/mp4">
+        <source src="./galerias/memoriales/maiquillahue/Maiquillahuereel.mp4" type="video/mp4">
     </video>
                                   
          <img src="./galerias/sin_foto.webp"data-descripcion="José Matias Ñanco Lillo, 60 años <br> Pescador, predicador protestante y simpatizante de izquierda" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
@@ -2412,7 +2412,7 @@ markers.push(markerestancilla);
 // Memorial de la Mano
 var markermano = L.marker([-39.840809, -73.215964], {icon: ejecucion});
 markermano.anio = 1984;
-markermano.anioMemorial = 1997;
+markermano.anioMemorial = 1995.1;
 markermano.iconoInicial = ejecucion;
 
 markermano.on('click', function() {
@@ -2484,7 +2484,7 @@ markersededario.on('click', function() {
         `     
         <h3>Encuentro Nacional de Agrupación de Familiares en Sede Rubén Darío</h3>
         <div class="galeria">
-    <img src="./galerias/actividades/encuentro_nacional/encuentro_2004.webp"data-descripcion="Encuentro nacional en Sede Rubén Darío" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+    <img src="./galerias/Actividades/encuentro_nacional/encuentro_2004.webp"data-descripcion="Encuentro nacional en Sede Rubén Darío" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
         </div>`,
         `<h3>Expedientes</h3>`
     );
@@ -2568,7 +2568,7 @@ markercni.on('click', function() {
     if (anioSlider >= 2013) {
         contenido = `<h3>Encuentro Nacional de la Agrupación 2013</h3>
                <div class="galeria">
-<img src="./galerias/actividades/encuentro_2013/encuentro_2013.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+<img src="./galerias/Actividades/encuentro_2013/encuentro_2013.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
 </div>
     `;
         anioTexto = '2013';
@@ -2577,9 +2577,9 @@ markercni.on('click', function() {
         contenido = `<h3>Visita Ana Gonzalez de Recabarren</h3> 
         <p>
                <div class="galeria">
-<img src="./galerias/actividades/visita_ana/ana_1.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
-  <img src="./galerias/actividades/visita_ana/ana_2.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
-  <img src="./galerias/actividades/visita_ana/ana_3.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+<img src="./galerias/Actividades/visita_ana/ana_1.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+  <img src="./galerias/Actividades/visita_ana/ana_2.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+  <img src="./galerias/Actividades/visita_ana/ana_3.webp"data-descripcion="" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
 
 </div>
 <p>
@@ -3219,9 +3219,9 @@ markers.push(marker);
 
 // Plazuela Carlos Lorca
 var marker = L.marker([-39.830120, -73.209806], {icon: memorial});
-marker.anio = 1975;
+marker.anio = 2015;
 marker.on('click', function() {
-    setAnio('1975');
+    setAnio('19 de abril de 2015');
     openPanel(
         `<h3>Plazuela Carlos Lorca Tobar</h3> 
 
@@ -3861,7 +3861,7 @@ markers.push(marker);
 var marker = L.marker([-40.233055, -71.958596], {icon: CCDD});
 marker.anio = 1973;
 marker.on('click', function() {
-    setAnio('1973.5');
+    setAnio('1973');
     openPanel(
         `<h3><a href="https://memoriaviva.com/centros-de-detencion/x-region/bodega-edifico-del-sindicato-esperanza-del-obrero-chabranco" target="_blank">Sede Sindicato esperanza del obrero de Chabranco</a></h3>
        
@@ -3938,7 +3938,7 @@ markercodepu.on('click', function() {
     setAnio('1991');
     openPanel(
         `<div class="galeria">
-        <img src="./galerias/codepu/1991_formalizaAfdd_Codepu.tif"data-descripcion="Exhumación Jose Gregorio Liendo Vera" onclick="ampliarFoto(this.src, this.closest('.galeria'))">      
+        <img src="./galerias/Actividades/codepu/afdd_codepu.webp"data-descripcion="Formalización de la Agrupación de Familiares de Detenidos Desaparecidos y Ejecutados Politicos en conjunto con el Comité de Defensa del Pueblo" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
 </div>`,
         `<h3>Expedientes</h3>`
     );
@@ -3959,8 +3959,8 @@ markersolasierra.on('click', function() {
          <h3>Visita de Sola Sierra</h3>
          
          <div class="galeria">
-        <img src="./galerias/actividades/solasierra/sola_sierra_1.webp"data-descripcion="Visita a la tumba de José Liendo Vera junto a Sola Sierra" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
-         <img src="./galerias/actividades/solasierra/sola_sierra_2.webp"data-descripcion="Visita a la tumba de José Liendo Vera junto a Sola Sierra" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+        <img src="./galerias/Actividades/solasierra/sola_sierra_1.webp"data-descripcion="Visita a la tumba de José Liendo Vera junto a Sola Sierra" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+         <img src="./galerias/Actividades/solasierra/sola_sierra_2.webp"data-descripcion="Visita a la tumba de José Liendo Vera junto a Sola Sierra" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
 </div>`,
         `<h3>Expedientes</h3>`
     );
@@ -4076,8 +4076,8 @@ markercddhh.on('click', function() {
         `<h3>Comisión de nacional de DDHH se reune en en Valdivia </h3>
       
  <div class="galeria">
-         <img src="./galerias/actividades/cddhh/cddhh_1.webp"data-descripcion="Comisión nacional de derechos humanos se reune en la sede Laminadora" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
-         <img src="./galerias/actividades/cddhh/cdhh_2.webp"data-descripcion="Comisión nacional de derechos humanos se reune en la sede Laminadora" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+         <img src="./galerias/Actividades/cddhh/cddhh_1.webp"data-descripcion="Comisión nacional de derechos humanos se reune en la sede Laminadora" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+         <img src="./galerias/Actividades/cddhh/cdhh_2.webp"data-descripcion="Comisión nacional de derechos humanos se reune en la sede Laminadora" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
         </div>`,
         `<h3>Expedientes</h3>`
     );
@@ -4268,7 +4268,7 @@ obligados a beber agua con orina y excrementos y recibían amenazas permanentes.
 markers.push(marker);
 
 // Hospital La Unión
-var markerlaunion = L.marker([-40.284640, -73.076326], {icon: memorial});
+var markerlaunion = L.marker([-40.284640, -73.076326], {icon: ejecucion});
 markerlaunion.anio = 1977;
 markerlaunion.on('click', function() {
     setAnio('18 de agosto de 1977');
@@ -4615,7 +4615,7 @@ markercodepu.on('click', function() {
         `<h3>Formalización AFDD y AFEP y CODEPU</h3>
         <br>
                                     <div class="galeria">
-                <img src="./galerias/actividades/codepu/afdd_codepu.webp"data-descripcion="Formalización de la Agrupación de Familiares de Detenidos Desaparecidos y Ejecutados Politicos en conjunto con el Comité de Defensa del Pueblo" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
+                <img src="./galerias/Actividades/codepu/afdd_codepu.webp"data-descripcion="Formalización de la Agrupación de Familiares de Detenidos Desaparecidos y Ejecutados Politicos en conjunto con el Comité de Defensa del Pueblo" onclick="ampliarFoto(this.src, this.closest('.galeria'))">
          </div>" `,
         `<h3>Expedientes</h3>`
     );
@@ -4693,7 +4693,7 @@ const fechasClave = [
     { valor: 1994, marker: markeruach },
     { valor: 1995, marker: markermemoliquine }, 
     { valor: 1996, marker: null },
-    { valor: 1997, marker: markermano },
+    { valor: 1995.1, marker: markermano },
     { valor: 1998, marker: markermemochihuio },   
     { valor: 1999, marker: markermemoneltume }, 
     { valor: 2000, marker: markerpichoy},
