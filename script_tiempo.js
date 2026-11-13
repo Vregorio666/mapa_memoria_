@@ -9,14 +9,13 @@ var mapa = L.map('mapa').setView([-39.90, -72.8], 9);
 
 // Capa OSM
 var positron = L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_586k_1_b6d80e23d42d3b32b360ed2e',
+  'https://basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png?key=cb1_586k_1_b6d80e23d42d3b32b360ed2e',
   {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-    subdomains: 'abcd',
     maxZoom: 19
   }
 );
-positron.addTo(mapa)
+positron.addTo(mapa);
 
 
 
