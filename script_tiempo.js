@@ -79,7 +79,8 @@ function ajustarPanel() {
     }
     const btnSiguiente = document.getElementById('btn-siguiente');
     const rectBtn = btnSiguiente.getBoundingClientRect();
-    panel.style.left = (rectBtn.right + 15) + 'px';
+    // el panel nunca queda más angosto que 360px (pantallas chicas)
+    panel.style.left = Math.min(rectBtn.right + 15, window.innerWidth - 360 - 10) + 'px';
     panel.style.right = '10px';
     panel.style.width = '';
 }

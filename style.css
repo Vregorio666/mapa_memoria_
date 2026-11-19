@@ -958,3 +958,113 @@ border-color: rgb(145, 44, 35);
     z-index: 1050 !important;
 }
 
+
+
+/* =====================================================
+   LAYOUT ADAPTABLE (PC / notebook)
+   Los elementos se agrupan en contenedores flex para que
+   se empujen entre sí en vez de pisarse. En móvil y
+   landscape móvil los contenedores son transparentes
+   (display: contents) y siguen valiendo las reglas de arriba.
+===================================================== */
+#barra-superior, #col-izq { display: contents; }
+
+@media (min-width: 769px) and (min-height: 501px) {
+
+  /* ---- Barra superior: título, subtítulo, slider, año ---- */
+  #barra-superior {
+    position: fixed;
+    top: clamp(6px, 1.5vh, 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0px, 0.5vh, 6px);
+    max-width: min(560px, 46vw);
+    pointer-events: none;
+  }
+  #barra-superior > * {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    max-width: 100%;
+  }
+  #barra-superior h1,
+  #barra-superior h2 { margin: 0; }
+  #info-subtitulo {
+    white-space: normal;
+    font-size: clamp(8px, 1.1vh, 12px);
+    line-height: 1.25;
+  }
+  #info-subtitulo h2 { font-size: clamp(9px, 1.6vh, 14px); }
+  #timeline {
+    padding: clamp(4px, 1vh, 16px) 18px;
+    pointer-events: auto;
+  }
+  #info-anio {
+    padding: 0;
+    font-size: clamp(13px, 2vh, 16px);
+  }
+
+  /* ---- Columna izquierda: logo, contexto, frase ---- */
+  #col-izq {
+    position: fixed;
+    top: 0;
+    left: clamp(8px, 2vw, 40px);
+    bottom: 13px;
+    width: clamp(220px, 28vw, 405px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1vh, 12px);
+    pointer-events: none;
+  }
+  #col-izq > * {
+    position: static;
+    top: auto;
+    left: auto;
+    bottom: auto;
+  }
+  #info-logo {
+    flex: none;
+    width: clamp(60px, min(10vw, 16vh), 150px);
+    max-height: none;
+    padding: 10px 0 0;
+  }
+  #info-contexto {
+    flex: 0 1 auto;
+    min-height: 0;
+    width: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    pointer-events: auto;       /* permite scroll si el texto es largo */
+    font-size: clamp(10px, 1.6vh, 13px);
+    line-height: 1.6;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(145, 44, 35) transparent;
+  }
+  #info-frase {
+    flex: none;
+    margin-top: auto;           /* se pega abajo */
+    max-width: none;
+  }
+
+  /* ---- Leyenda y contenidos del panel que dependían de px fijos ---- */
+  #info-leyenda { bottom: clamp(10px, 4vh, 60px); }
+  .pdf-thumb { height: clamp(220px, 45vh, 400px); }
+  .galeria iframe { height: clamp(200px, 40vh, 350px); }
+  .galeria video { max-height: clamp(200px, 40vh, 400px); }
+}
+
+/* Pantallas angostas o bajas (notebook de 12", escalado 125–150%):
+   se oculta la frase para que no choque con la leyenda */
+@media (min-width: 769px) and (min-height: 501px) and (max-width: 1365px),
+       (min-width: 769px) and (min-height: 501px) and (max-height: 719px) {
+  #info-frase { display: none !important; }
+}
+@media (min-width: 769px) and (min-height: 501px) and (max-width: 1365px) {
+  #col-izq { bottom: clamp(78px, 13vh, 120px); }
+}
